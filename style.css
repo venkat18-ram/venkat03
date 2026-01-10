@@ -20,6 +20,83 @@ body {
     overflow-x: hidden;
     
 }
+/* Styling for the icon next to your name */
+.name-icon, .name-badge-icon {
+    font-size: 2.5rem; /* Large enough to be noticed */
+    color: var(--accent);
+    margin-bottom: 10px;
+    display: inline-block;
+    filter: drop-shadow(0 0 10px rgba(0, 210, 255, 0.5)); /* Glowing effect */
+    animation: iconFloat 3s ease-in-out infinite;
+}
+
+/* Floating animation specifically for the name icon */
+@keyframes iconFloat {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-10px) rotate(5deg); }
+}
+
+/* Make sure the H1 handles the icon well */
+.hero-content h1 {
+    display: flex;
+    flex-direction: column; /* Puts icon above name */
+    align-items: flex-start; /* Aligns to left to match your text */
+}
+
+/* Mobile fix: Center the icon when the text centers */
+@media (max-width: 992px) {
+    .hero-content h1 {
+        align-items: center;
+    }
+}
+/* Row of icons above the name */
+.name-status-row {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.name-status-row i {
+    font-size: 1.2rem;
+    color: var(--text-dim);
+    transition: 0.3s;
+}
+
+/* Hover effect: icons light up when you hover the name */
+.hero-content h1:hover .name-status-row i {
+    color: var(--accent);
+    filter: drop-shadow(0 0 8px var(--accent));
+}
+
+/* The Verified Badge next to name */
+.verified-icon {
+    font-size: 1.8rem;
+    color: #2ecc71; /* Green for "Verified" feel */
+    margin-left: 10px;
+    vertical-align: middle;
+    animation: pulse-green 2s infinite;
+}
+
+/* Pulse animation for the verified badge */
+@keyframes pulse-green {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.1); opacity: 0.7; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+/* Coding-themed icons for the corner of the hero section */
+.hero::before {
+    content: '</>';
+    position: absolute;
+    top: 20%;
+    right: 5%;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 8rem;
+    color: rgba(255, 255, 255, 0.03); /* Very subtle background text */
+    z-index: 1;
+    pointer-events: none;
+}
+
 
 /* Glassmorphism Navbar */
 /* Navbar Base - Set to Absolute so it floats over the hero */
@@ -32,7 +109,17 @@ body {
     padding: 2rem 0; /* More padding since it doesn't shrink anymore */
     background: transparent; /* No background needed as it won't scroll */
 }
+.bg-icons i {
+    position: absolute;
+    color: rgba(255, 255, 255, 0.03);
+    z-index: -1;
+    user-select: none;
+}
 
+.icon-1 { top: 10%; left: 10%; font-size: 5rem; transform: rotate(15deg); }
+.icon-2 { bottom: 15%; left: 20%; font-size: 4rem; transform: rotate(-20deg); }
+.icon-3 { top: 40%; right: 15%; font-size: 6rem; transform: rotate(10deg); }
+.icon-4 { bottom: 30%; right: 5%; font-size: 3rem; transform: rotate(-15deg); }
 .nav-container {
     max-width: 1400px;
     margin: 0 auto;
@@ -493,7 +580,7 @@ body {
 
 .view-btn {
     padding: 12px 25px;
-    background: white;
+    background: white;  
     color: black;
     text-decoration: none;
     border-radius: 50px;
