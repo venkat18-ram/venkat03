@@ -41,3 +41,14 @@ window.dispatchEvent(new Event('scroll'));
 
 
 
+
+function openModal(imgSrc) {
+    const modal = document.getElementById("certModal");
+    const modalImg = document.getElementById("fullCertImage");
+    modal.style.display = "flex"; // Using flex to center the image
+    modalImg.src = imgSrc;
+}
+
+function closeModal() {
+    document.getElementById("certModal").style.display = "none";
+}

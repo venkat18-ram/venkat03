@@ -165,7 +165,9 @@
                     <p>Hands-on training in designing and implementing an Arduino AI smart car using ultrasonic sensors, motor drivers, and basic AI decision-making logic..</p>
                 </div>
                 <div class="cert-footer">
-                    <a href="kitesevent.jpeg" target="_blank" class="cert-link">Verify <i class="fas fa-external-link-alt"></i></a>
+                   <a href="javascript:void(0)" class="cert-link" onclick="openModal('kitesevent.jpeg')">
+    Verify <i class="fas fa-search-plus"></i>
+</a>
                 </div>
             </div>
 
@@ -179,7 +181,8 @@
                     <p>Demonstration of core programming paradigms, pointer manipulation, and the ability to build resource-efficient software architectures..</p>
                 </div>
                 <div class="cert-footer">
-                    <a href="clanguage.jpeg" target="_blank" class="cert-link">Verify <i class="fas fa-external-link-alt"></i></a>
+                    <a href="javascript:void(0)" class="cert-link" onclick="openModal('clanguage.jpeg')">
+    Verify <i class="fas fa-search-plus"></i></a>
                 </div>
             </div>
 
@@ -193,7 +196,8 @@
                     <p>Validation of real-world robotics integration, autonomous navigation logic, and the successful deployment of hardware-software systems in a large-scale public exhibition.</p>
                 </div>
                 <div class="cert-footer">
-                    <a href="robotics.jpg" target="_blank" class="cert-link">Verify <i class="fas fa-external-link-alt"></i></a>
+                    <a href="javascript:void(0)" class="cert-link" onclick="openModal('robotics.jpg')">
+    Verify <i class="fas fa-search-plus"></i></a>
                 </div>
             </div>
         </div>
@@ -249,7 +253,10 @@
             </div>
         </div>
     </section>
-
+<div id="certModal" class="modal" style="display:none;">
+    <span class="close-modal" onclick="closeModal()">&times;</span>
+    <img class="modal-content" id="fullCertImage">
+</div>
     <script src="script.js"></script>
 </body>
 </html>
