@@ -38,3 +38,6 @@ window.addEventListener("scroll", () => {
 
 // Trigger scroll once on load to show hero content
 window.dispatchEvent(new Event('scroll'));
+
+
+
