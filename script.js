@@ -52,3 +52,27 @@ function openModal(imgSrc) {
 function closeModal() {
     document.getElementById("certModal").style.display = "none";
 }
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const emailBtn = document.getElementById('finalMailBtn');
+    
+    if (emailBtn) {
+        emailBtn.addEventListener('click', function(e) {
+            // 1. Copy to clipboard automatically
+            const email = "battikerivenkatram2006@gmail.com";
+            navigator.clipboard.writeText(email);
+            
+            // 2. Visual Feedback
+            const originalText = this.innerHTML;
+            this.innerHTML = '<i class="fas fa-check"></i> Email Copied & Opening...';
+            
+            setTimeout(() => {
+                this.innerHTML = originalText;
+            }, 3000);
+
+            // 3. Log to console to verify the code is running
+            console.log("Contact button successfully triggered.");
+        });
+    }
+});

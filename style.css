@@ -754,3 +754,117 @@ body {
     }
 }
 
+
+
+/* Contact Section Styling */
+.contact {
+    padding: 100px 8%;
+    background: var(--bg-dark);
+}
+
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 40px;
+    margin-top: 50px;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: var(--glass);
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.info-item i {
+    font-size: 1.5rem;
+    color: var(--accent);
+}
+
+.info-item h4 {
+    color: var(--text-main);
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+.info-item p {
+    color: var(--text-dim);
+    font-size: 0.9rem;
+}
+
+.contact-card {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 50px;
+    border-radius: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+    transition: 0.4s;
+   
+}
+
+.contact-card:hover {
+    border-color: var(--accent);
+    box-shadow: 0 10px 30px rgba(0, 210, 255, 0.1);
+}
+
+.contact-card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.contact-card p {
+    margin-bottom: 30px;
+    color: var(--text-dim);
+}
+
+/* Mobile Responsiveness for Contact */
+@media (max-width: 768px) {
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+    .contact-card {
+        padding: 30px;
+    }
+}
+
+/* This clears the 'invisible glass' blocking your click */
+.bg-icons, .blob-shape, .hero-visual {
+    pointer-events: none !important;
+    z-index: -1 !important;
+}
+
+#contact {
+    position: relative;
+    z-index: 99;
+}
+
+.contact-card {
+    position: relative;
+    z-index: 100;
+}
+
+#finalMailBtn {
+    position: relative;
+    z-index: 101 !important;
+    pointer-events: auto !important;
+    cursor: pointer !important;
+    display: inline-block;
+}
+
+.copy-hint {
+    font-size: 0.7rem;
+    color: var(--accent);
+    margin-top: 10px;
+    opacity: 0.8;
+}
+
+
