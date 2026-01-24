@@ -868,3 +868,58 @@ body {
 }
 
 
+.resume-btn {
+    position: relative;
+    overflow: hidden;
+    padding: 12px 30px;
+    border: 1px solid rgba(0, 210, 255, 0.3) !important;
+    background: rgba(0, 210, 255, 0.05) !important;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn-glow {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(0, 210, 255, 0.2),
+        transparent
+    );
+    transition: 0.5s;
+    z-index: 1;
+}
+
+/* Hover Effects */
+.resume-btn:hover {
+    transform: translateY(-3px);
+    border-color: var(--accent) !important;
+    box-shadow: 0 0 20px rgba(0, 210, 255, 0.4);
+    color: #fff !important;
+}
+
+.resume-btn:hover .btn-glow {
+    left: 100%;
+}
+
+.resume-btn i {
+    transition: transform 0.3s ease;
+}
+
+.resume-btn:hover i {
+    transform: translateY(2px); /* Makes the download icon look like it's pointing down */
+}
